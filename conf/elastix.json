@@ -1,0 +1,53 @@
+{
+    "asterisk" : {
+            "context": "from-zaptel",
+            "busyCount": 3           
+    },
+
+    "postfix" : {
+            "messageSizeLimit":1024,
+            "myOrigin": "$myhostname",
+            "relayDomains": "$mydestination",
+            "relayHost": "$mydomain",
+            "authEnable": "yes",
+            "passwordMaps": "hash:/etc/postfix/password",
+            "securityOptions": "",
+            "smtpAddr": "smtp.test.lan"
+    },
+
+    "cron" : {
+            "minute": "47",
+            "hour": "6",
+            "month": "*",
+            "dayOfMonth": "*",
+            "dayOfWeek": "6"
+    },
+
+    "faxClients" : {
+            "startIP": "192.168.1.13",
+            "endIP": "192.168.1.31",
+            "extraIPs": ["192.168.1.59", "192.168.1.69"]
+    },
+
+
+    "httpd" : {
+            "uploadMaxFileSize": "125M",
+            "postMaxSize":  "125M",
+            "createDefaultFolders": true
+    },
+
+    "ldap" : {
+            "host": "192.168.40.7",
+            "baseDn": "ou=Users, dc=k16, dc=lan",
+            "retrAttrs": ["cn", "displayName", "givenName", "sn", "telephoneNumber", "ou"]
+    },
+    "elastix" : {
+            "ergoCompName": "Εργοταξίου Καλοχωρίου",
+            "phonebookXmlPath": "/var/www/html/phonebook/gs_phonebook.xml",
+            "phonebookHtmlPath": "/var/www/html/phonebook/extensions.html",
+            "cols": 3,
+            "attrsLst": ["cn", "telephoneNumber"],
+            "faxClientsPath": "/root/elastixAutomatedConfs"
+    }
+    
+}
