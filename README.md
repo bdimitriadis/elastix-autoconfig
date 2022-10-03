@@ -28,7 +28,7 @@ Libs directory, contains the libraries that you can use for each individual conf
 
 ## Authors
 
-* **Blasis Dimitriadis** - *Initial work* - [Elastix Automated Configuration](https://github.com/bdimitriadis/elastix-autoconfig)
+* **Vlasios Dimitriadis** - *Initial work* - [Elastix Automated Configuration](https://github.com/bdimitriadis/elastix-autoconfig)
 
 
 ## License
